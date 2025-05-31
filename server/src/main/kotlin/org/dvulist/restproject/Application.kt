@@ -10,6 +10,7 @@ import io.ktor.server.routing.routing
 import org.dvulist.restproject.database.DatabaseFactory
 import org.dvulist.restproject.routes.collectionPointRoutes
 import kotlinx.serialization.Serializable
+import org.dvulist.restproject.routes.wasteTypeRoutes
 
 fun Application.module() {
     DatabaseFactory.init()
@@ -23,5 +24,6 @@ fun Application.module() {
             call.respondText("Ktor: ${Greeting().greet()}")
         }
         collectionPointRoutes()
+        wasteTypeRoutes()
     }
 }
