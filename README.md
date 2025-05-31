@@ -8,7 +8,7 @@
 
 - **JDK 21** (скачать: https://jdk.java.net/21/)
 - **Java SDK 21 должен быть выбран в IDE**
-- **Android Studio** (или IntelliJ IDEA с Kotlin Multiplatform plugin)
+- **Android Studio**
 - **Интернет** (для загрузки зависимостей Gradle)
 
 ## Запуск
