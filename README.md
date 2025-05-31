@@ -1,16 +1,21 @@
-This is a Kotlin Multiplatform project targeting Desktop, Server.
+# Экологическая платформа для учета отходов
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+## Описание
 
-* `/server` is for the Ktor server application.
+Проект реализует REST API на Ktor и десктоп-клиент на Jetpack Compose Desktop. Клиент взаимодействует с сервером и поддерживает базовые CRUD-операции.
 
-* `/shared` is for the code that will be shared between all targets in the project.
-  The most important subfolder is `commonMain`. If preferred, you can add code to the platform-specific folders here too.
+## Требования
 
+- **JDK 21** (скачать: https://jdk.java.net/21/)
+- **Java SDK 21 должен быть выбран в IDE**
+- **Android Studio** (или IntelliJ IDEA с Kotlin Multiplatform plugin)
+- **Интернет** (для загрузки зависимостей Gradle)
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+## Запуск
+1. Откройте два терминала.
+2. В первом запустите сервер:
+   ```bash
+   ./gradlew :server:run
+3. Во втором запустите клиент:
+   ```bash
+   ./gradlew :composeApp:run

@@ -8,7 +8,7 @@ plugins {
 group = "org.dvulist.restproject"
 version = "1.0.0"
 application {
-    mainClass.set("org.dvulist.restproject.ApplicationKt")
+    mainClass.set("org.dvulist.restproject.ServerKt")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=${extra["io.ktor.development"] ?: "false"}")
 }
 
