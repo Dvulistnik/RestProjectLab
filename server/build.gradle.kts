@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlinJvm)
     alias(libs.plugins.ktor)
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.1.20"
     application
 }
 
@@ -18,4 +19,11 @@ dependencies {
     implementation(libs.ktor.server.netty)
     testImplementation(libs.ktor.server.test.host)
     testImplementation(libs.kotlin.test.junit)
+    implementation(libs.ktor.server.content.negotiation)
+    implementation(libs.ktor.serialization.kotlinx.json)
+    implementation("org.jetbrains.exposed:exposed-core:0.48.0") // Используйте последнюю версию
+    implementation("org.jetbrains.exposed:exposed-dao:0.48.0")
+    implementation("org.jetbrains.exposed:exposed-jdbc:0.48.0")
+    implementation("org.jetbrains.exposed:exposed-java-time:0.48.0")
+    implementation("org.xerial:sqlite-jdbc:3.46.0.0") // Драйвер JDBC для SQLite
 }

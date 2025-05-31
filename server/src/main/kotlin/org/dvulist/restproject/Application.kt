@@ -1,20 +1,27 @@
 package org.dvulist.restproject
 
+import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
-import io.ktor.server.engine.*
-import io.ktor.server.netty.*
-import io.ktor.server.response.*
-import io.ktor.server.routing.*
-
-fun main() {
-    embeddedServer(Netty, port = SERVER_PORT, host = "0.0.0.0", module = Application::module)
-        .start(wait = true)
-}
+import io.ktor.server.application.install
+import io.ktor.server.plugins.contentnegotiation.*
+import io.ktor.server.response.respondText
+import io.ktor.server.routing.get
+import io.ktor.server.routing.routing
+import org.dvulist.restproject.database.DatabaseFactory
+import org.dvulist.restproject.routes.collectionPointRoutes
+import kotlinx.serialization.Serializable
 
 fun Application.module() {
+    DatabaseFactory.init()
+
+    install(ContentNegotiation) {
+        json()
+    }
+
     routing {
         get("/") {
             call.respondText("Ktor: ${Greeting().greet()}")
         }
+        collectionPointRoutes()
     }
 }

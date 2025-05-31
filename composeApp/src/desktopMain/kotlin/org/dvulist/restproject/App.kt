@@ -20,13 +20,14 @@ import io.ktor.client.engine.cio.CIO
 import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
 import kotlinx.coroutines.launch
+import org.dvulist.restproject.ui.CollectionPointScreen
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 @Preview
 fun App() {
     MaterialTheme {
-        MainScreen()
+        CollectionPointScreen()
     }
 }
 
