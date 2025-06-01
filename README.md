@@ -5,7 +5,7 @@
 Проект реализует REST API на Ktor и десктоп-клиент на Jetpack Compose Desktop. Клиент взаимодействует с сервером и поддерживает базовые CRUD-операции.
 
 ## Требования
-~~~~
+
 - **JDK 21** (скачать: https://jdk.java.net/21/)
 - **Java SDK 21 должен быть выбран в IDE**
 - **Android Studio** (или IntelliJ IDEA с Kotlin Multiplatform plugin)
