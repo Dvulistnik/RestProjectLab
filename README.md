@@ -6,8 +6,7 @@
 
 ## Требования
 
-- **JDK 21** (скачать: https://jdk.java.net/21/ или https://www.oracle.com/java/technologies/downloads)
-- **Java SDK 21 должен быть выбран в IDE**
+- **JDK 21** (Можно скачать в IDE, либо https://jdk.java.net/21/ или https://www.oracle.com/java/technologies/downloads)
 - **Android Studio**
 - **Интернет** (для загрузки зависимостей Gradle)
 
